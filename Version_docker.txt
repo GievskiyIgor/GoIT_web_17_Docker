@@ -1,0 +1,9 @@
+Client:
+ Cloud integration: v1.0.31
+ Version:           23.0.5
+ API version:       1.42
+ Go version:        go1.19.8
+ Git commit:        bc4487a
+ Built:             Wed Apr 26 16:20:14 2023
+ OS/Arch:           windows/amd64
+ Context:           default

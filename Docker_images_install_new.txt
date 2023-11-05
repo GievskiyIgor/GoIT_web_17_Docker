@@ -1,0 +1,41 @@
+PS C:\LessonsPython_new\web_2_docker> docker build . -t igorgievskiy/first-docker-images 
+[+] Building 0.2s (2/2) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                        0.1s 
+ => => transferring dockerfile: 31B                                                                                                                                                         0.0s 
+ => [internal] load .dockerignore                                                                                                                                                           0.1s 
+ => => transferring context: 2B                                                                                                                                                             0.0s 
+ERROR: failed to solve: the Dockerfile cannot be empty
+(env) PS C:\LessonsPython_new\web_2_docker> docker build . -t igorgievskiy/first-docker-images
+[+] Building 29.6s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                        0.1s 
+ => => transferring dockerfile: 837B                                                                                                                                                        0.0s 
+ => [internal] load .dockerignore                                                                                                                                                           0.1s 
+ => => transferring context: 2B                                                                                                                                                             0.0s 
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                                                                                         2.6s 
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                               0.0s 
+ => [1/4] FROM docker.io/library/python:3.11-slim@sha256:f89d4d260b6a5caa6aa8e0e14b162deb76862890c91779c31f762b22e72a6cef                                                                  12.4s 
+ => => resolve docker.io/library/python:3.11-slim@sha256:f89d4d260b6a5caa6aa8e0e14b162deb76862890c91779c31f762b22e72a6cef                                                                   0.1s 
+ => => sha256:52cf1e24d0baa095fd8137e69a13042442d40590f03930388df49fe4ecb8ebdb 1.37kB / 1.37kB                                                                                              0.0s 
+ => => sha256:4a8189355e725d8d250876af1f90af19e36f869fe5d1553a8969d35f18274465 6.93kB / 6.93kB                                                                                              0.0s 
+ => => sha256:f89d4d260b6a5caa6aa8e0e14b162deb76862890c91779c31f762b22e72a6cef 1.65kB / 1.65kB                                                                                              0.0s 
+ => => sha256:578acb154839e9d0034432e8f53756d6f53ba62cf8c7ea5218a2476bf5b58fc9 29.15MB / 29.15MB                                                                                            8.0s 
+ => => sha256:ac65017cfc5699a3ab0e5ed6e11c321fc0c664fd6b4c8744cda7914e74897c47 3.51MB / 3.51MB                                                                                              2.0s 
+ => => sha256:201dfde4aadff9e0b4279613ea9091c25c7bd5f75419be222cff87de7a83dddb 12.84MB / 12.84MB                                                                                            5.6s 
+ => => sha256:e2162e32ea00fa4f706ac3276b3073819b55df822b0d0faeb12d712c6773b9b8 245B / 245B                                                                                                  2.3s 
+ => => sha256:3cef43552ffac628f757a39a16b1af774bffdb891088899c049127eb2f5b9ecc 3.39MB / 3.39MB                                                                                              4.3s 
+ => => extracting sha256:578acb154839e9d0034432e8f53756d6f53ba62cf8c7ea5218a2476bf5b58fc9                                                                                                   1.7s 
+ => => extracting sha256:ac65017cfc5699a3ab0e5ed6e11c321fc0c664fd6b4c8744cda7914e74897c47                                                                                                   0.3s 
+ => => extracting sha256:201dfde4aadff9e0b4279613ea9091c25c7bd5f75419be222cff87de7a83dddb                                                                                                   0.8s 
+ => => extracting sha256:e2162e32ea00fa4f706ac3276b3073819b55df822b0d0faeb12d712c6773b9b8                                                                                                   0.0s 
+ => => extracting sha256:3cef43552ffac628f757a39a16b1af774bffdb891088899c049127eb2f5b9ecc                                                                                                   0.4s 
+ => [internal] load build context                                                                                                                                                           3.3s 
+ => => transferring context: 28.09MB                                                                                                                                                        3.1s 
+ => [2/4] WORKDIR /APP                                                                                                                                                                      4.8s 
+ => [3/4] COPY . .                                                                                                                                                                          1.5s 
+ => [4/4] RUN pip install -r requirements.txt                                                                                                                                               7.4s 
+ => exporting to image                                                                                                                                                                      0.7s 
+ => => exporting layers                                                                                                                                                                     0.7s
+ => => writing image sha256:d7a2457294df3cffea3fcdf51cc629304f07e789ddf48eff452c2a69d137c05d                                                                                                0.0s 
+ => => naming to docker.io/igorgievskiy/first-docker-images                                                                                                                                 0.0s 
+(env) PS C:\LessonsPython_new\web_2_docker> docker run -itd -p 3000:5000 igorgievskiy/first-docker-images
+7e92275f0348108e4e021c5b0157674ae4980772efb25274bef3096b9b06a531
